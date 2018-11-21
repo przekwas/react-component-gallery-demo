@@ -5,6 +5,8 @@ import {
     ComponentThree
 } from './gallery';
 
+import ThisIsDumb from './wtf';
+
 export default class App extends React.Component {
     constructor(props) {
         super(props);
@@ -17,13 +19,13 @@ export default class App extends React.Component {
     componentDidMount() {
         let componentArray = [
             <ComponentOne>
-                <h2>This is madness ..</h2>
+                <ThisIsDumb />
             </ComponentOne>,
             <ComponentTwo>
-                <h2>NO .. </h2>
+                <ThisIsDumb />
             </ComponentTwo>,
             <ComponentThree>
-                <h2>THIS. IS. SPARTA!!!!!!11one</h2>
+                <ThisIsDumb />
             </ComponentThree>
         ];
         this.setState({ componentArray });
