@@ -16,9 +16,15 @@ export default class App extends React.Component {
 
     componentDidMount() {
         let componentArray = [
-            <ComponentOne />,
-            <ComponentTwo />,
-            <ComponentThree />
+            <ComponentOne>
+                <h2>This is madness ..</h2>
+            </ComponentOne>,
+            <ComponentTwo>
+                <h2>NO .. </h2>
+            </ComponentTwo>,
+            <ComponentThree>
+                <h2>THIS. IS. SPARTA!!!!!!11one</h2>
+            </ComponentThree>
         ];
         this.setState({ componentArray });
     }
@@ -77,7 +83,7 @@ export default class App extends React.Component {
                     </div>
                 </div>
                 <div className="row mt-1">
-                    <div className="col-12 mx-2 border" style={{ boxShadow: '10px 15px #eee' }}>
+                    <div className="col-12 mx-2 border" style={{ boxShadow: '5px 10px #eee' }}>
                         {this.renderComponents()}
                     </div>
                 </div>
