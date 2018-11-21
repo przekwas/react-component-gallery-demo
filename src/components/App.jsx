@@ -10,7 +10,7 @@ export default class App extends React.Component {
         super(props);
         this.state = {
             indexCounter: 0,
-            componentArray: []
+            componentArray: [],
         };
     }
 
@@ -27,16 +27,18 @@ export default class App extends React.Component {
         return (
             <ul className="nav justify-content-around">
                 <li className="nav-item">
-                    <button
-                        className="nav-link active btn btn-info"
-                        onClick={() => this.leftArrowClick()}
-                    >-</button>
+                        <button
+                            className="nav-link active btn btn-info"
+                            style={{ boxShadow: '5px 10px #eee' }}
+                            onClick={() => this.leftArrowClick()}
+                        >-</button>
                 </li>
                 <li className="nav-item">
-                    <button
-                        className="nav-link active btn btn-info"
-                        onClick={() => this.rightArrowClick()}
-                    >+</button>
+                        <button
+                            className="nav-link active btn btn-info"
+                            style={{ boxShadow: '5px 10px #eee' }}
+                            onClick={() => this.rightArrowClick()}
+                        >+</button>
                 </li>
             </ul>
         );
@@ -51,14 +53,14 @@ export default class App extends React.Component {
 
     leftArrowClick() {
         let indexCounter = this.state.indexCounter - 1;
-        if (indexCounter >= 0) {
+        if (indexCounter >= 0 ) {
             this.setState({ indexCounter });
         }
     }
 
     renderComponents() {
         let array = this.state.componentArray;
-        let index = this.state.indexCounter
+        let index = this.state.indexCounter;
         return (
             <div>
                 {array[index]}
@@ -69,13 +71,13 @@ export default class App extends React.Component {
     render() {
         return (
             <main className="container">
-                <div className="row">
+                <div className="row mb-4">
                     <div className="col-12">
                         {this.renderArrows()}
                     </div>
                 </div>
                 <div className="row mt-1">
-                    <div className="col-12 mx-2 border">
+                    <div className="col-12 mx-2 border" style={{ boxShadow: '10px 15px #eee' }}>
                         {this.renderComponents()}
                     </div>
                 </div>
